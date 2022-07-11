@@ -1,13 +1,16 @@
+import click
 import time
 from reservation import Reservation
 from time_functions import sw_datetime_to_utc, time_until_checkin, strfdelta
 
-
-def main():
-
-    confirm_num = '2F8R4W'
-    first_name = 'Brenton'
-    last_name = 'Graham'
+@click.command()
+@click.option('--confirm-num', type=click.STRING,
+              prompt='Passenger confirmation number', help='Passenger confirmation number')
+@click.option('--first-name', type=click.STRING,
+              prompt='Passenger first name', help='Passenger first name')
+@click.option('--last-name', type=click.STRING,
+              prompt='Passenger last name', help='Passenger last name')
+def main(confirm_num, first_name, last_name):
 
     # Instantiate reservation object
     reservation = Reservation(confirm_num, first_name, last_name)
