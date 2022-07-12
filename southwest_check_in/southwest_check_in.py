@@ -10,7 +10,7 @@ from time_functions import sw_datetime_to_utc, time_until_checkin, strfdelta
               prompt='Passenger first name', help='Passenger first name')
 @click.option('--last-name', type=click.STRING,
               prompt='Passenger last name', help='Passenger last name')
-def main(confirm_num, first_name, last_name):
+def cli(confirm_num, first_name, last_name):
 
     # Instantiate reservation object
     reservation = Reservation(confirm_num, first_name, last_name)
@@ -45,4 +45,4 @@ def main(confirm_num, first_name, last_name):
 
 
 if __name__ == "__main__":
-   main()
+   cli()
