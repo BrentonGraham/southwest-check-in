@@ -3,7 +3,7 @@ import pytz
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from time_functions import sw_datetime_to_utc
+from .time_functions import sw_datetime_to_utc
 
 
 class Reservation():

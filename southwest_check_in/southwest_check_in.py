@@ -1,7 +1,7 @@
 import click
 import time
-from reservation import Reservation
-from time_functions import sw_datetime_to_utc, time_until_checkin, strfdelta
+from .reservation import Reservation
+from .time_functions import sw_datetime_to_utc, time_until_checkin, strfdelta
 
 @click.command()
 @click.option('--confirm-num', type=click.STRING,
