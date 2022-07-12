@@ -52,6 +52,7 @@ setup(
         'urllib3==1.26.10',
         'webdriver-manager==3.8.0',
         'wsproto==1.1.0',
-        'zope.interface==5.4.0'
+        'zope.interface==5.4.0',
+        'pathlib'
     ]
 )
